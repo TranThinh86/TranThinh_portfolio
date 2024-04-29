@@ -6,6 +6,7 @@
     --ternary:#898989;
     --light:#F2F2F2;
     --secondary:#070606;
+    --pink: #faeee7
 }
 
 body{
@@ -229,7 +230,7 @@ section.services .card-wrapper .card:hover h2, section.services .card-wrapper .c
 
 section.freelancer{
     text-align: center;
-    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/camera.png);
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/moon.jpg);
     color:var(--pure);
     clip-path:polygon(0 0, 100% 0, 100% 100%, 67% 80%, 0 100%);
     padding-bottom:14rem;
@@ -343,6 +344,7 @@ section.work .card-wrapper .card .overlay a{
 section.work .card-wrapper .card img{
     height:100%;
     width:100%;
+    object-fit: cover;
 }
 
 section.blog{
@@ -537,6 +539,33 @@ footer .copyright{
     text-decoration:none;
     font-size: 2rem;
 }
+
+/* marquee {
+    color: var(--primary);
+    font-size: 4rem;
+    font-weight: 100;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+} */
+marquee {
+    color: var(--primary);
+    font-size: 4rem;
+    font-weight: 100;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-shadow: 0 0 5px #fec7d7, 0 0 10px #d9d4e7, 0 0 15px #f9f8fc;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% { text-indent: 100% }
+    25% { text-indent: 100% }
+    75% { text-indent: -100% }
+    100% { text-indent: -100% } }
+
 
 @media (max-width:1024px){
     header #main-nav{
